@@ -11,6 +11,7 @@ import LuckyDrawNotEntered from './Components/LuckyDraw/LuckyDrawNotEntered';
 import LuckyDrawerEntered from './Components/LuckyDraw/LuckyDrawEntered';
 import LuckyDrawResultDeclared from './Components/LuckyDraw/LuckyDrawResultDeclared';
 import Spinner from './Components/Spinner/spinner';
+import PredictGame from './Components/PredictGame'
 import Question from './Components/IPL/iplQuestion';
 import Confirm from './Components/IPL/iplConfirm';
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='/spinner' component={Spinner} /> 
           <Route path="/confirm/:handle" component={Confirm} />
           <Route path="/question" component={Question} /> 
+          <Route path="/predict" component={PredictGame} /> 
     </Router>
   );
 }

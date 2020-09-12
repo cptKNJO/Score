@@ -1,0 +1,8 @@
+.container {
+    :global {
+        .ant-layout-content {
+            padding: 50px !important;
+            box-shadow: 0 0 38px 7px rgba(0, 0, 0, 0.12);
+      }
+  }
+}
