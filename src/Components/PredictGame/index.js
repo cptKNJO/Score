@@ -60,8 +60,8 @@ const PredictGame = () => {
       <div className="s-container">
         <Header title="Predict" />
 
-        <Content style={{ padding: '50px 50px' }}>
-          <Tabs defaultActiveKey="2">
+        <Content style={{ padding: '60px 60px' }}>
+          <Tabs defaultActiveKey="1">
             <TabPane tab="Upcoming" key="1"
               style={{
                 color: colors.grayDark

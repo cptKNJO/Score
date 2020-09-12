@@ -26,20 +26,27 @@ const TeamCol = ({ item, teamNo }) => {
             item.team_1 === item.winner &&
             colors.green,
           color: item.user_prediction === item.team_1 && colors.white,
-          padding: '0.6rem 0.8rem',
+          padding: '0.6rem 1.8rem',
         }}
       >
         <Tag
           style={{
             display: 'block',
             borderRadius: '1rem',
-            width: '40px',
+            width: '50px',
             margin: '0 auto 0.4rem auto',
-            color: colors.white,
-            backgroundColor: getBackgroundColor(item, teamNo = 1),
+            backgroundColor: getBackgroundColor(item, (teamNo = 1)),
+            color:
+              getBackgroundColor(item, (teamNo = 1)) === colors.white
+                ? colors.grayDark
+                : colors.white,
+            textAlign: 'center',
+            fontSize: '0.7rem',
+            fontWeight: 'bold',
+            letterSpacing: '0.02rem',
           }}
         >
-          {item.team_1 === item.winner ? <div>Won</div> : <div>Lost</div>}
+          {item.team_1 === item.winner ? <div>WON</div> : <div>LOST</div>}
         </Tag>
         {item.team_1}{' '}
         <Radio
@@ -57,20 +64,27 @@ const TeamCol = ({ item, teamNo }) => {
         backgroundColor: item.user_prediction === item.team_2 && colors.green,
         color: item.user_prediction === item.team_2 && colors.white,
         alignSelf: 'stretch',
-        padding: '0.6rem 0.8rem',
+        padding: '0.6rem 1.8rem',
       }}
     >
       <Tag
         style={{
           display: 'block',
           borderRadius: '1rem',
-          width: '40px',
+          width: '50px',
           margin: '0 auto 0.4rem auto',
-          backgroundColor: getBackgroundColor(item, teamNo = 2),
-          color: getBackgroundColor(item, teamNo = 2) !== colors.white && colors.grayDark
+          backgroundColor: getBackgroundColor(item, (teamNo = 2)),
+          color:
+            getBackgroundColor(item, (teamNo = 2)) === colors.white
+              ? colors.grayDark
+              : colors.white,
+          textAlign: 'center',
+          fontSize: '0.7rem',
+          fontWeight: 'bold',
+          letterSpacing: '0.02rem',
         }}
       >
-        {item.team_2 === item.winner ? <div>Won</div> : <div>Lost</div>}
+        {item.team_2 === item.winner ? <div>WON</div> : <div>LOST</div>}
       </Tag>
       <Radio
         checked={item.user_prediction === item.team_2}
