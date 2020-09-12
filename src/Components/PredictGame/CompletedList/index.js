@@ -4,7 +4,7 @@ import { List, Radio, Row, Col } from 'antd'
 
 import { colors } from '../config'
 
-const UpcomingList = ({ data, onChange }) => {
+const CompletedList = ({ data }) => {
   return (
     <List
       dataSource={data}
@@ -16,7 +16,7 @@ const UpcomingList = ({ data, onChange }) => {
           }}
         >
           <Radio.Group
-            onChange={(e) => onChange(e, item)}
+            disabled
             defaultValue={item.user_prediction}
             style={{ width: '100%', fontSize: '0.9rem' }}
           >
@@ -26,14 +26,16 @@ const UpcomingList = ({ data, onChange }) => {
                 <Col
                   flex={'auto'}
                   align={'middle'}
-                  style={{ fontSize: '0.7rem' }}
+                  style={{ fontSize: '0.7rem', fontStyle: 'italic' }}
                 >
                   {`17th Sep 2020`}
-                  {item.user_prediction !== '' ? (
-                    <div>VS</div>
+                  {item.user_prediction === item.winner ? (
+                    <div style={{ color: colors.green }}>
+                        You won 20 points
+                    </div>
                   ) : (
-                    <div style={{ color: colors.purple, fontWeight: 'bold' }}>
-                      Select a team
+                    <div style={{ color: colors.red }}>
+                        Oops! Wrong prediction
                     </div>
                   )}
                 </Col>
@@ -47,4 +49,4 @@ const UpcomingList = ({ data, onChange }) => {
   )
 }
 
-export default UpcomingList
+export default CompletedList
