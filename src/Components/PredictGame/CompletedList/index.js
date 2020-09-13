@@ -26,15 +26,15 @@ const CompletedList = ({ data }) => {
                 <Col
                   flex={'auto'}
                   align={'middle'}
-                  style={{ fontSize: '0.7rem', fontStyle: 'italic' }}
+                  style={{ fontSize: '0.7rem', }}
                 >
                   {`17th Sep 2020`}
                   {item.user_prediction === item.winner ? (
-                    <div style={{ color: colors.green }}>
+                    <div style={{ color: colors.green, fontStyle: 'italic'  }}>
                         You won 20 points
                     </div>
                   ) : (
-                    <div style={{ color: colors.red }}>
+                    <div style={{ color: colors.red, fontStyle: 'italic'  }}>
                         Oops! Wrong prediction
                     </div>
                   )}
