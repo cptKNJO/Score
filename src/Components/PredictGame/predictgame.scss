@@ -1,0 +1,17 @@
+.ant-tabs {
+  color: gray !important;
+  &-tab {
+    font-size: 24px !important;
+    &-btn {
+      font-weight: 600 !important;
+    }
+    &-active > &-btn {
+      color: black !important;
+    }
+  }
+}
+
+.ant-tabs-ink-bar {
+  font-size: 24px; // this applies to all text in the Tabs component
+  border-bottom: 1px solid black;
+}

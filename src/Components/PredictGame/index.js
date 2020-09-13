@@ -8,6 +8,7 @@ import { Tabs, Layout } from 'antd'
 const { TabPane } = Tabs
 const { Content } = Layout
 import { colors } from './config'
+import styles from './predictgame.scss'
 
 const api = 'https://unify.smsgupshup.com/apps/KotakIPLApi/prediction'
 
@@ -61,7 +62,9 @@ const PredictGame = () => {
         <Header title="Predict" />
 
         <Content style={{ padding: '60px 60px' }}>
-          <Tabs defaultActiveKey="1">
+          <Tabs
+            defaultActiveKey="1"
+          >
             <TabPane tab="Upcoming" key="1"
               style={{
                 color: colors.grayDark
