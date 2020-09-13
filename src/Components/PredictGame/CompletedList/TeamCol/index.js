@@ -38,7 +38,7 @@ const TeamCol = ({ item, teamNo }) => {
             backgroundColor: getBackgroundColor(item, (teamNo = 1)),
             color:
               getBackgroundColor(item, (teamNo = 1)) === colors.white
-                ? colors.grayDark
+                ? colors.black
                 : colors.white,
             textAlign: 'center',
             fontSize: '0.7rem',
@@ -76,7 +76,7 @@ const TeamCol = ({ item, teamNo }) => {
           backgroundColor: getBackgroundColor(item, (teamNo = 2)),
           color:
             getBackgroundColor(item, (teamNo = 2)) === colors.white
-              ? colors.grayDark
+              ? colors.black
               : colors.white,
           textAlign: 'center',
           fontSize: '0.7rem',

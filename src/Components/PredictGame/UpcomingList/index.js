@@ -18,7 +18,7 @@ const UpcomingList = ({ data, onChange }) => {
           <Radio.Group
             onChange={(e) => onChange(e, item)}
             defaultValue={item.user_prediction}
-            style={{ width: '100%', fontSize: '0.9rem' }}
+            style={{ width: '100%', fontSize: '14px' }}
           >
             <Row align={'middle'} justify={'space-between'}>
               <TeamCol item={item} teamNo={1} />
@@ -26,7 +26,7 @@ const UpcomingList = ({ data, onChange }) => {
                 <Col
                   flex={'auto'}
                   align={'middle'}
-                  style={{ fontSize: '0.7rem' }}
+                  style={{ fontSize: '12px' }}
                 >
                   {`17th Sep 2020`}
                   {item.user_prediction !== '' ? (

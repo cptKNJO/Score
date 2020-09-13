@@ -26,7 +26,7 @@ const CompletedList = ({ data }) => {
                 <Col
                   flex={'auto'}
                   align={'middle'}
-                  style={{ fontSize: '0.7rem', }}
+                  style={{ fontSize: '12px', }}
                 >
                   {`17th Sep 2020`}
                   {item.user_prediction === item.winner ? (

@@ -12,7 +12,7 @@ const TeamCol = ({ item, teamNo }) => {
           backgroundColor:
             item.user_prediction === item.team_1 && colors.purple,
           color: item.user_prediction === item.team_1 && colors.white,
-          padding: '0.6rem 1.8rem',
+          padding: '1.2rem 1.8rem',
         }}
       >
         {item.team_1}{' '}
@@ -31,7 +31,7 @@ const TeamCol = ({ item, teamNo }) => {
         backgroundColor: item.user_prediction === item.team_2 && colors.purple,
         color: item.user_prediction === item.team_2 && colors.white,
         alignSelf: 'stretch',
-        padding: '0.6rem 1.8rem',
+        padding: '1.2rem 1.8rem',
       }}
     >
       <Radio
